@@ -7,7 +7,12 @@ const Render = ({ renderDoc }) => {
       <div className="bottom">
         <div className="render-wrapper">
           <div className="render">
-            <iframe srcDoc={renderDoc} width="100%" height="100%" />
+            <iframe
+              title="webpage"
+              srcDoc={renderDoc}
+              width="100%"
+              height="100%"
+            />
           </div>
         </div>
       </div>
