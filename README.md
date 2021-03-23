@@ -5,8 +5,11 @@ A web app similar to Codepen.io where you can code websites in the browser and s
 ## Features
 - HTML CSS & JS live update coding
 
-## Upcoming
-- Different theme support
+## TODO
+- Multiple theme support
+- Fix Javascript error so it works
+- Different layouts? 
+- Save work in browser
 - Ability to download files in project folder
 
 ## Run it
@@ -14,4 +17,8 @@ A web app similar to Codepen.io where you can code websites in the browser and s
 Clone the repository onto you computer. In the project directory, you can run:
 
 ### `yarn start`
+
+You could also just head to https://livecodeapp.netlify.app/ and try it out
+
+
 
