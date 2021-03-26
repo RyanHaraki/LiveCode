@@ -12,8 +12,6 @@ A web app similar to Codepen.io where you can code websites in the browser and s
 - Save work in browser(local storage) ✔️
 - Ability to download files in project folder
 
-## Done
-
 ## Run it
 
 Clone the repository onto you computer. In the project directory, you can run:
