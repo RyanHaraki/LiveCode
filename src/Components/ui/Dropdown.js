@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const Component = () => {
+const Component = ({ setTheme }) => {
+  const onChange = (e) => {
+    const selectedTheme = e.target.value;
+    setTheme(selectedTheme);
+  };
+
   return (
     <Container>
-      <select>
+      <select onChange={onChange}>
         <option value="monokai">Monokai</option>
         <option value="textmate">Textmate</option>
         <option value="terminal">Terminal</option>
-        <option value="solarized-dark">Solarized Dark</option>
+        <option value="solarized_dark">Solarized Dark</option>
       </select>
     </Container>
   );

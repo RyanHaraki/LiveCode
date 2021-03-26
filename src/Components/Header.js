@@ -3,13 +3,13 @@ import styled from "styled-components";
 import BtnGreen from "./ui/BtnGreen";
 import Dropdown from "./ui/Dropdown";
 
-const Header = () => {
+const Header = ({ setTheme }) => {
   return (
     <Container>
       <div className="left">LiveCode</div>
 
       <div className="right">
-        <Dropdown />
+        <Dropdown setTheme={setTheme} />
         <BtnGreen text="Download" />
       </div>
     </Container>

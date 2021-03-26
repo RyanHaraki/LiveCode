@@ -16,7 +16,7 @@ import "ace-builds/src-noconflict/ext-language_tools";
 //Other
 import styled from "styled-components";
 
-const Editor = ({ languageName, setHtml, setCss, setJs }) => {
+const Editor = ({ languageName, setHtml, setCss, setJs, theme }) => {
   const [warning, setWarning] = useState(false);
 
   const onChange = (e) => {
@@ -47,13 +47,14 @@ const Editor = ({ languageName, setHtml, setCss, setJs }) => {
       </EditorHead>
       <AceEditor
         mode={languageName}
-        theme="monokai"
+        theme={`${theme}`}
         onChange={onChange}
         name="UNIQUE_ID_OF_DIV"
         editorProps={{ $blockScrolling: true }}
         width="95%"
+        fontSize={14}
         height="100%"
-        defaultValue=""
+        defaultValue={localStorage.getItem(languageName)}
         setOptions={{
           enableLiveAutocompletion: true,
         }}

@@ -5,10 +5,11 @@ import { useState, useEffect } from "react";
 import Render from "./Components/Render";
 
 function App() {
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
+  const [html, setHtml] = useState(localStorage.getItem("html"));
+  const [css, setCss] = useState(localStorage.getItem("css"));
+  const [js, setJs] = useState(localStorage.getItem("javascript"));
   const [renderDoc, setRenderDoc] = useState("");
+  const [theme, setTheme] = useState("monokai");
 
   // Update Render template
   useEffect(() => {
@@ -21,13 +22,16 @@ function App() {
       </html>
       `);
     }, 250);
+    localStorage.setItem("html", html);
+    localStorage.setItem("css", css);
+    localStorage.setItem("javascript", js);
 
     return () => clearTimeout(timeout);
   }, [html, css, js]);
 
   return (
     <Container>
-      <Header />
+      <Header setTheme={setTheme} />
       <CodeContainer
         setRenderDoc={setRenderDoc}
         html={html}
@@ -36,6 +40,7 @@ function App() {
         setCss={setCss}
         js={js}
         setJs={setJs}
+        theme={theme}
       />
       <Render renderDoc={renderDoc} />
     </Container>

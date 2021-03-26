@@ -1,0 +1,5 @@
+TODO 
+
+- Get the background change to work
+    - Check CodeContainer.js, the styled component in there tries to take in a variable which is not currently working. You are now passing in the currentTheme through props which is not working any better than when currentTheme was in the CodeContainer component.
+- Add localstorage session
