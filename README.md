@@ -6,11 +6,13 @@ A web app similar to Codepen.io where you can code websites in the browser and s
 - HTML CSS & JS live update coding
 
 ## TODO
-- Multiple theme support
+- Multiple theme support (in progress)
 - Fix Javascript error so it works
 - Different layouts? 
-- Save work in browser
+- Save work in browser(local storage) ✔️
 - Ability to download files in project folder
+
+## Done
 
 ## Run it
 
