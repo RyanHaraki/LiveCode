@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "./Components/Header";
 import CodeContainer from "./Components/CodeContainer";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Render from "./Components/Render";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   const [css, setCss] = useState(localStorage.getItem("css"));
   const [js, setJs] = useState(localStorage.getItem("javascript"));
   const [renderDoc, setRenderDoc] = useState("");
-  const [theme, setTheme] = useState("monokai");
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
   // Update Render template
   useEffect(() => {

@@ -11,7 +11,7 @@ const terminal = {
 };
 
 const textmate = {
-  background: "#002b36;",
+  background: "#ebebeb;",
 };
 
 export { monokai, solarizedDark, terminal, textmate };

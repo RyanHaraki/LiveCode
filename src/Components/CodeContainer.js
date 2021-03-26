@@ -15,7 +15,7 @@ const CodeContainer = ({ setHtml, setCss, setJs, setRenderDoc, theme }) => {
   }
 
   return (
-    <Container background={currentTheme}>
+    <Container background={currentTheme.background}>
       <Editor
         setHtml={setHtml}
         setRenderDoc={setRenderDoc}
@@ -40,12 +40,12 @@ const CodeContainer = ({ setHtml, setCss, setJs, setRenderDoc, theme }) => {
 
 export default CodeContainer;
 
-const Container = styled.div`
-  background: ${(currentTheme) => currentTheme.background};
-  height: 40vh;
-  border-bottom: 4px #211e1c solid;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 15px;
-`;
+const Container = styled.div((props) => ({
+  background: props.background,
+  height: "40vh",
+  borderBottom: "4px #211e1c solid",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "12px 15px",
+}));

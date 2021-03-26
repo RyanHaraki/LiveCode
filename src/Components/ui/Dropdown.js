@@ -5,6 +5,7 @@ const Component = ({ setTheme }) => {
   const onChange = (e) => {
     const selectedTheme = e.target.value;
     setTheme(selectedTheme);
+    localStorage.setItem("theme", e.target.value);
   };
 
   return (
